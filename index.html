@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contrato Vitalício</title>
+
+  <!-- caminho correto para GitHub Pages -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="contrato">
+
+  <h1>CONTRATO DE HONRA, EXPOSIÇÃO E DEDICAÇÃO EXCLUSIVA</h1>
+  <p class="subtitulo">Instrumento Particular de Natureza Simbólica e Vitalícia</p>
+
+  <div class="texto-contrato">
+    <p>
+      Pelo presente instrumento particular, a Parte Outorgante declara, de forma livre,
+      consciente, espontânea e irrevogável, que realizou, em ambiente público e na presença
+      de terceiros, ato voluntário de exposição corporal consistente na contração deliberada
+      de seus músculos glúteos.
+    </p>
+
+    <p>
+      O referido ato foi praticado em caráter exclusivo, honorífico e direcionado
+      unicamente à Parte Beneficiária, configurando manifestação simbólica de dedicação,
+      entrega pessoal e distinção afetiva.
+    </p>
+
+    <p>
+      Reconhecem as partes que tal conduta possui natureza única, irrepetível e
+      intransferível, ficando vedada qualquer tentativa de equiparação, reivindicação
+      ou apropriação por terceiros.
+    </p>
+
+    <p>
+      O presente contrato é celebrado em caráter definitivo, irretratável e irrevogável,
+      produzindo efeitos morais, emocionais e afetivos por prazo vitalício.
+    </p>
+  </div>
+
+  <form id="formContrato">
+
+    <label>
+      Nome completo
+      <input type="text" id="nome" required>
+    </label>
+
+    <label>
+      Data de nascimento
+      <input type="date" id="dataNascimento" required>
+    </label>
+
+    <div class="assinatura-container">
+      <span>Assinatura manuscrita</span>
+      <canvas id="assinatura" width="520" height="160"></canvas>
+      <button type="button" id="limpar">Limpar assinatura</button>
+    </div>
+
+    <label class="aceite">
+      <input type="checkbox" id="aceite" required>
+      Declaro que li integralmente o contrato e concordo com todos os seus termos.
+    </label>
+
+    <!-- botão real, controlado por JS -->
+    <button type="submit" class="btn">Finalizar contrato</button>
+
+  </form>
+</div>
+
+<!-- Tela de sucesso -->
+<div id="sucesso" class="sucesso" style="display: none;">
+  <div class="box">
+    <div class="check">✅</div>
+    <h2>Contrato validado com sucesso</h2>
+    <p>
+      A assinatura foi registrada corretamente.<br>
+      Este contrato passa a produzir efeitos imediatos<br>
+      e permanece válido por tempo indeterminado.
+    </p>
+  </div>
+</div>
+
+<!-- caminho correto para GitHub Pages -->
+<script src="./assinatura.js"></script>
+</body>
+</html>
