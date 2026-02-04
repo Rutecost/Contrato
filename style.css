@@ -10,6 +10,9 @@ body {
   background: linear-gradient(180deg, #0f172a, #020617);
   font-family: 'Inter', sans-serif;
   color: #e5e7eb;
+
+  /* evita scroll elástico no mobile */
+  overscroll-behavior: contain;
 }
 
 /* Container principal */
@@ -91,10 +94,14 @@ input:focus {
 
 canvas {
   width: 100%;
+  height: 160px;
   border: 2px dashed #475569;
   border-radius: 12px;
   background: #020617;
   cursor: crosshair;
+
+  /* 🔒 trava scroll e zoom ao assinar no celular */
+  touch-action: none;
 }
 
 /* Botão limpar */
@@ -175,4 +182,16 @@ canvas {
   font-size: 14px;
   line-height: 1.6;
   color: #cbd5f5;
+}
+
+/* Ajustes finos para mobile */
+@media (max-width: 600px) {
+  .contrato {
+    margin: 20px;
+    padding: 28px;
+  }
+
+  canvas {
+    height: 140px;
+  }
 }
